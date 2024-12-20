@@ -26,7 +26,21 @@ chrome.storage.local.get(['videoUrls', 'aulasTextos'], (data) => {
       
 
       const textAfterLink = document.createElement('span');
-      textAfterLink.innerHTML = ` : <br>${cleanedUrl}<br><br>`;
+      textAfterLink.innerHTML = `-> Copy URL`;
+      
+      textAfterLink.addEventListener('click', () => {
+        const input = document.createElement('input');
+        input.value = cleanedUrl;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+
+        textAfterLink.innerHTML = "Link copied!";
+        setTimeout(() => {
+          textAfterLink.innerHTML = "Copy URL again";
+        }, 2000);
+      });
 
       li.appendChild(link);
       li.appendChild(textAfterLink);

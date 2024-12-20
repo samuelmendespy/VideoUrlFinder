@@ -27,13 +27,13 @@ function captureOnClickAttributes() {
   });
 
   if (aulasTextos.length > 0) {
-    console.log('Primeiro item de aulasTextos:', aulasTextos[0]);
+    console.log('First video header in aulasTextos:', aulasTextos[0]);
   } else {
-    console.log('Nenhum título encontrado.');
+    console.log('No header was found.');
   }
 
   chrome.storage.local.set({ videoUrls: videoUrls, aulasTextos: aulasTextos }, () => {
-    console.log('URLs dos vídeos e textos salvos!');
+    console.log('Video URLs saved with their respective video headers!');
   });
 }
 
