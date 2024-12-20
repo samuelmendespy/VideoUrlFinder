@@ -20,8 +20,12 @@
 
 To install **VideoUrlFinder** in Microsoft Edge, follow the steps below:
 
+
 ### 1. Prepare the Extension Folder
-Ensure you have the extension's **`src`** folder, which contains the necessary files for the extension.
+Clone the repository to your local machine and locate the extension's **`src`** folder, which contains the necessary files for the extension.
+```bash
+git clone https://github.com/your-username/VideoUrlFinder.git
+```
 
 ### 2. Open Microsoft Edge
 Launch **Microsoft Edge** on your computer.
