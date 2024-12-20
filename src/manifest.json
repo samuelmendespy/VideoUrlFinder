@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Video Url Finder",
-  "version": "0.2",
+  "version": "0.3",
   "description": "Find div.video elements and retrives video urls.",
   "permissions": [
     "activeTab",
