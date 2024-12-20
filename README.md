@@ -51,7 +51,21 @@ This allows you to install extensions that are not packaged.
 Once the extension is loaded, you should see it listed on the Extensions page. You can now start using the extension to retrieve video URLs.
 
 ### 7. Retrieve links
-- After install the extension, go to Start Program webpage with the desired videos and open the extension menu to see the video links detected.
+- After sucessfully installing the extension, go to Start Program webpage that displays the desired videos.
+
+### 8. Enable the Extension
+1 - On the browser Toolbar, click on Extesions icoon to open the extensions list.
+![Screenshot 1](screenshots/screenshot1.png)
+2 - On the extesnions list, click on the "eye icon" beside the extension to display it on toolbar. 
+![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 3](screenshots/screenshot3.png)
+3 - On the Toolbar, click on the extension icon to open the extension Popup with a list of links.
+![Screenshot 4](screenshots/screenshot4.png)
+![Screenshot 5](screenshots/screenshot5.png)
+
+
+
+
 
 ## Development & Contributing
 
