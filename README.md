@@ -54,14 +54,17 @@ Once the extension is loaded, you should see it listed on the Extensions page. Y
 - After sucessfully installing the extension, go to Start Program webpage that displays the desired videos.
 
 ### 8. Enable the Extension
-1 - On the browser Toolbar, click on Extesions icoon to open the extensions list.
-![Screenshot 1](screenshots/screenshot1.png)
-2 - On the extesnions list, click on the "eye icon" beside the extension to display it on toolbar. 
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
-3 - On the Toolbar, click on the extension icon to open the extension Popup with a list of links.
-![Screenshot 4](screenshots/screenshot4.png)
-![Screenshot 5](screenshots/screenshot5.png)
+1. **Extension Menu on Toolbar:"**
+    - On the Edge's Toolbar, click on Extesions icoon to open the extensions list.
+    ![Screenshot 1](screenshots/screenshot1.png)
+2. **Display the extension on Toolbar:**
+    -  In the extensions list, click on the "eye icon" next to the extension to make it visible on Edge's toolbar. 
+    ![Screenshot 2](screenshots/screenshot2.png)
+    ![Screenshot 3](screenshots/screenshot3.png)
+3. ** Open the Extension **
+    - Click on the extension icon in the toolbar to open the extension popup with a list of links.
+    ![Screenshot 4](screenshots/screenshot4.png)
+    ![Screenshot 5](screenshots/screenshot5.png)
 
 
 
