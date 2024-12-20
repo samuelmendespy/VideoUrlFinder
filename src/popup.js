@@ -36,9 +36,9 @@ chrome.storage.local.get(['videoUrls', 'aulasTextos'], (data) => {
         document.execCommand('copy');
         document.body.removeChild(input);
 
-        textAfterLink.innerHTML = "Link copied!";
+        textAfterLink.innerHTML = "-> Link copied!";
         setTimeout(() => {
-          textAfterLink.innerHTML = "Copy URL again";
+          textAfterLink.innerHTML = "-> Copy URL again";
         }, 2000);
       });
 
