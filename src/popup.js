@@ -24,11 +24,34 @@ chrome.storage.local.get(['videoUrls', 'aulasTextos'], (data) => {
           link.innerHTML = aulasTextos[index];
       }
       
-
-      const textAfterLink = document.createElement('span');
-      textAfterLink.innerHTML = `-> Copy URL`;
+      const btnPlayVideo = document.createElement('button');
       
-      textAfterLink.addEventListener('click', () => {
+      const playIcon = document.createElement('img');
+      playIcon.src = chrome.runtime.getURL('icons/play.png')
+      playIcon.alt = 'Play video';
+      playIcon.style.width = '20px';
+      playIcon.style.height = '20px';
+      
+      btnPlayVideo.appendChild(playIcon);
+      
+      btnPlayVideo.addEventListener('click', () => {
+          window.open(cleanedUrl, '_blank');
+      });
+      
+      
+      
+      const btnCopyLink = document.createElement('button');
+      
+      const copyIcon = document.createElement('img');
+      copyIcon.src = chrome.runtime.getURL('icons/button.png');
+      copyIcon.alt = 'Copy Link';
+      copyIcon.style.width = '20px';
+      copyIcon.style.height = '20px';
+      
+      btnCopyLink.appendChild(copyIcon);
+      
+      
+      btnCopyLink.addEventListener('click', () => {
         const input = document.createElement('input');
         input.value = cleanedUrl;
         document.body.appendChild(input);
@@ -36,16 +59,30 @@ chrome.storage.local.get(['videoUrls', 'aulasTextos'], (data) => {
         document.execCommand('copy');
         document.body.removeChild(input);
 
-        textAfterLink.innerHTML = "-> Link copied!";
+        copyIcon.src = chrome.runtime.getURL('icons/button-pressed.png');
+        
         setTimeout(() => {
-          textAfterLink.innerHTML = "-> Copy URL again";
+          copyIcon.src = chrome.runtime.getURL('icons/button.png');
         }, 2000);
       });
-
+      
+      
       li.appendChild(link);
-      li.appendChild(textAfterLink);
+      li.appendChild(btnPlayVideo);
+      li.appendChild(btnCopyLink);
 
       listElement.appendChild(li);
     });
   }
+  
+  
+    const clearButton = document.getElementById('clear');
+    
+    clearButton.addEventListener('click', () => {
+        
+    chrome.storage.local.set({ videoUrls: [], aulasTextos: [] }, () => {
+      listElement.innerHTML = '<li>No video URL was found.</li>';
+    });
+  });
+  
 });
