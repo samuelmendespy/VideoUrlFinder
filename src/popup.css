@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 300px;
+}
+.popup-header {
+  background-color: DeepSkyBlue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#clear {
+  margin-right: 20px; 
+  background-color: MidnightBlue; 
+  color: White;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#clear:hover {
+  background-color: MediumBlue; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+li {
+  margin: 5px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+li a {
+  color: MidnightBlue;
+  font-weight: bold;
+  flex-grow: 1;
+  text-decoration: none;
+}
