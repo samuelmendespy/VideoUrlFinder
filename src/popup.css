@@ -44,8 +44,17 @@ li {
 }
 
 li a {
-  color: MidnightBlue;
+  display:flex;
+  color: DodgerBlue;
   font-weight: bold;
   flex-grow: 1;
   text-decoration: none;
+}
+
+li a:visited {
+  color: LightSteelBlue;
+}
+
+li a button {
+  margin-left: auto;
 }

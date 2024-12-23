@@ -1,17 +1,13 @@
-function createOpenVideoPlayerButton(url) {
-  const openVideoPlayerButton = document.createElement('button');
+function createPlayerButton() {
+  const playerButton = document.createElement('button');
   const playIcon = document.createElement('img');
   playIcon.src = chrome.runtime.getURL('icons/play.png');
-  playIcon.alt = 'Play video';
+  playIcon.alt = 'Open Video Player';
   playIcon.style.width = '20px';
   playIcon.style.height = '20px';
-  openVideoPlayerButton.appendChild(playIcon);
+  playerButton.appendChild(playIcon);
 
-  openVideoPlayerButton.addEventListener('click', () => {
-    window.open(url, '_blank');
-  });
-
-  return openVideoPlayerButton;
+  return playerButton;
 }
 
 
@@ -62,23 +58,27 @@ chrome.storage.local.get(['videoUrls', 'aulasTextos'], (data) => {
      
       const videoPlayerUrl = url.replace('?autoplay=1', '');
 	  
-      const defaultVideoHeader = `Aula `;
-
       const li = document.createElement('li');
 
       const videoHeader = document.createElement('a');
       
+      
       if (headers.length === 0) {
-          videoHeader.innerHTML = `${defaultVideoHeader}`;
+          videoHeader.innerHTML = `Video ${index}`;
       } else {
           videoHeader.innerHTML = headers[index];
       }
       
-      const openVideoPlayerButton = createOpenVideoPlayerButton(videoPlayerUrl);
+      const playerButton = createPlayerButton();
+      
+      videoHeader.appendChild(playerButton);
+      videoHeader.href = videoPlayerUrl;
+      videoHeader.target = "_blank";
+      
+      
       const copyLinkButton = createCopyLinkButton(videoPlayerUrl);
       
       li.appendChild(videoHeader);
-      li.appendChild(openVideoPlayerButton);
       li.appendChild(copyLinkButton);
 
       listElement.appendChild(li);
